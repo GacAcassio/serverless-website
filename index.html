@@ -1,84 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>You have failed to find the server</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://exit23a.ca/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Minimalist Personal Site</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="margin-right:15%;margin-left:15%;">
-
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Liam Wadman</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-            <!--link list-->
-
-            <li><a href="#">About This Website</a></li>
-            
-            <li><a href="https://github.com/disgruntled">Github <span class="sr-only">(current)</span></a></li>
-
-            <li><a href="trip.html">2020 Trip</a></li>
-
-             
-
-              <!---drop down-->
-
-              <!---
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-              --->
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
-
-
-    <h1>This website has no server</h1>
-    <P><a href='https://en.wikipedia.org/wiki/Ludacris'>Ludacris</a>, I know but bare with me for a moment. This website is powered entirely using cloudflare workers. <a href="https://www.cloudflare.com/en-ca/products/cloudflare-workers/">Cloudflare workers</a> implements the Javascript ServiceWorkers API server side (or more specifically, at the edge)</P>
-    <p> It's a <a href='https://en.wikipedia.org/wiki/Serverless_computing'>serverless</a> computing solution that's a lot of fun</p>
-    <p>It's intended use is to offload a bit of work from your busy servers. You're saving a lot of extra hops when you use a worker, either in your browser or in cloudflare to fulfill your request</p>
-    <p>It's particularly attractive where you want to write a single page app, but don't want to put all the trust in your user's user-agent. </p>
-    <P>This was done by creating cloudflare workers with a default route of https://exit23a.ca/* and http://exit23a.ca/* </P>
-    <p>The actual IP address that's set to "orange cloud" in cloudflare for my account is a random IP for google.com. The service worker intercepts the request and I've configure it to never send the actual traffic to google</p>
-
-<h1>Faq</h1>
-    <h3>Do I recommend this?</h3>
-    <p>Definitely not. Not only is it needlessly complicated, it also breaks a lot of cloudflares built in functionality. A great example is that I had to use a "page rule" to upconvert all traffic to HTTPS because the built in cloud flare functionality is broken.</p>
-    <p>Another example: workers are evaluated before cloud flare apps, but after page rules. So "apps" are also out. </p>
-    <h3>Then why do it?</h3>
-    <p>A good way to get test out my own knowledge of javascript and to just see if I could do something quirky</p>
-    <h3>Why cloudflare? Why not lambda at the edge or lambda + apigateway</h3>
-    <p>Cloudflare is simpler. AWS is incredible, but there is a lot of overhead to making something work.</p>
-    <h3>Where is the data stored</h3>
-    <p>In Cloudflare workers key-value (KV)pairs. Such that the content itself is stored in cloudflare. </p>
-    <h3>Can I find some examples of this, I'm curious</h3>
-    <p>Yes, you should be able to check out some really simple code on my <a href='https://github.com/disgruntled'>GitHub</a></p>
-    <h3>How do you update this website</h3>
-    <p>I use the cloudflare workers key value API to overwrite the entry that stores this file. It's quite powerful, with minimal effort this could be made into a dynamic CMS</p>
-    <h3><strong>Update</strong> 22/08/2020 </h3>
-    <p>Perhaps it is a coincedence, but early in the cloudflare workers usecase there was no mention of static websites and their hosting on it.</p>
-    <p>Now it is <a href="https://developers.cloudflare.com/workers/platform/sites/start-from-scratch">https://developers.cloudflare.com/workers/platform/sites/start-from-scratch</a></p>
-    <p>I like to think I had a lot to do with this.</p>
+    </header>
+    <main>
+      <div class="photo-box">
+        <img src="your-photo.jpg" alt="Your Photo">
+      </div>
+      <h1>Welcome to My Retro Website</h1>
+      <p>
+        Hello! This is a personal site inspired by the aesthetics of the old web. Minimalist design,
+        green characters, and a focus on simplicity.
+      </p>
+    </main>
+    <footer>
+      <p>&copy; 2024 Retro Minimalist</p>
+    </footer>
+  </div>
 </body>
+
+</html>
