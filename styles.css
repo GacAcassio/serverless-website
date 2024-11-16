@@ -41,30 +41,6 @@ body {
   color: #00CC00;
 }
 
-/* Photo Box */
-.photo-box {
-  border: 2px solid #00FF00;
-  padding: 5px;
-  margin: 20px auto;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px #00FF00;
-}
-
-.photo-box img {
-  max-width: 100%;
-  max-height: 100%;
-  border: 1px solid #00FF00;
-}
-
-/* Main Content */
-main h1 {
-  font-size: 2em;
-  margin: 20px 0;
-}
 
 main p {
   font-size: 1.2em;
@@ -77,3 +53,33 @@ footer {
   border-top: 1px solid #00FF00;
   padding-top: 10px;
 }
+
+/* Main Content */
+main {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    gap: 20px; /* Space between the title and photo */
+}
+
+main h1 {
+    font-size: 2em;
+    margin: 0; /* Remove any extra margin */
+}
+
+.photo-box {
+    border: 2px solid #00FF00;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 0; /* Remove margin bottom, since we're using flexbox */
+    box-shadow: 0 0 10px #00FF00;
+}
+
+.photo-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
